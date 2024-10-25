@@ -1,2 +1,6 @@
 @import './style.css';
 @import 'bootstrap';
+
+.height-custom{
+    min-height: 60vh;
+}
