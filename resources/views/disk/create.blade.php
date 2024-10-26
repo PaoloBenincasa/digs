@@ -9,7 +9,7 @@
         </div>
         <div class="row justify-content-center align-items-center height-custom">
             <div class="col-12">
-                <livewire:create-article-form />
+                <livewire:create-disk-form />
             </div>
         </div>
     </div>

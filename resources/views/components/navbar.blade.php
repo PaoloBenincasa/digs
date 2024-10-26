@@ -15,6 +15,7 @@
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">Ciao, {{ Auth::user()->name }}</a>
                             <ul class="dropdown-menu">
+                                <li><a href="{{route('create.disk')}}" class="dropdown-item">Vendi il tuo disco</a></li>
                                 <li><a href="" class="dropdown-item" onclick="event.preventDefault(); document.querySelector('#form-logout').submit()">Logout</a></li>
                                 <form action="{{ route('logout') }}" method="post" id="form-logout" class="d-none"></form>
                                 {{-- <li><a href="" class="dropdown-item">another action</a></li>
@@ -30,8 +31,8 @@
                             Benvenuto!
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ route('login') }}" class="dropdown-item"></a>Accedi</li>
-                            <li><a href="{{ route('register') }}" class="dropdown-item"></a>Registrati</li>
+                            <li><a href="{{ route('login') }}" class="dropdown-item">Accedi</a></li>
+                            <li><a href="{{ route('register') }}" class="dropdown-item">Registrati</a></li>
                         </ul>
                     </li>
                 @endauth
