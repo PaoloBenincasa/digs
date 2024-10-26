@@ -13,7 +13,7 @@ class Disk extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'artist', 'year', 'price', 'description', 'user_id', 'format_id'
+        'title', 'artist', 'year', 'price', 'description', 'user_id', 'format_id', 'label'
     ];
 
     public function user(): BelongsTo{
