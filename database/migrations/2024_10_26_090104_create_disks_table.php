@@ -18,6 +18,11 @@ return new class extends Migration
             $table->year('year');
             $table->decimal('price', 8, 2);
             $table->text('description');
+            $table->unsignedBigInteger('format_id')->nullable();
+            $table->foreignId('format_id')->references('id')->on('formats');
+            $table->unsignedBigInteger('genre_id')->nullable();
+            $table->foreignId('genre_id')->references('id')->on('genres');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
