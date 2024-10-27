@@ -13,9 +13,9 @@ class FormatSeeder extends Seeder
      */
 
     public $formats = [
-        'vinyl',
+        'vinile',
         'cd',
-        'cassette',
+        'cassetta',
     ];
 
     public function run(): void

@@ -36,7 +36,7 @@ class CreateDiskForm extends Component
         return [
             'title' => 'required|min:1',
             'artist' => 'required|min:1',
-            'year' => 'required|integer|min:1900|max:' . date('Y'),
+            'year' => 'required|integer|before_or_equal:' . date('Y'),
             'price' => 'required|numeric',
             'description' => 'required|min:10',
             'format' => 'required',
@@ -50,6 +50,7 @@ class CreateDiskForm extends Component
             '.required' => 'Campo obbligatorio',
             'title.min' => 'Il titolo deve avere almeno 1 carattere',
             'artist.min' => 'L\'artista deve avere almeno 1 carattere',
+            'year.max' => 'L\'anno non può essere successivo al ' . date('Y'),
             'description.min' => 'La descrizione deve avere almeno 10 caratteri',
             'price.numeric' => 'Il prezzo deve essere un numero decimale',
         ];
